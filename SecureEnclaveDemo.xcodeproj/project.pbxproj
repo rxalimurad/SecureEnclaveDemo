@@ -13,6 +13,11 @@
 		FAAFBFA72BEF57DD00360CEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAFBFA52BEF57DD00360CEA /* Main.storyboard */; };
 		FAAFBFA92BEF57E100360CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAFBFA82BEF57E100360CEA /* Assets.xcassets */; };
 		FAAFBFAC2BEF57E100360CEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAFBFAA2BEF57E100360CEA /* LaunchScreen.storyboard */; };
+		FAAFBFB42BEF5A9F00360CEA /* SecureEnclaveWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFBFB32BEF5A9F00360CEA /* SecureEnclaveWrapper.swift */; };
+		FAAFBFB62BEF5CC600360CEA /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFBFB52BEF5CC600360CEA /* AlertManager.swift */; };
+		FAAFBFBC2BEF6D2E00360CEA /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFBFB92BEF6D2E00360CEA /* KeychainWrapper.swift */; };
+		FAAFBFBD2BEF6D2E00360CEA /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFBFBB2BEF6D2E00360CEA /* KeychainItemAccessibility.swift */; };
+		FAAFBFC62BEF86A200360CEA /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFBFC52BEF86A200360CEA /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,12 @@
 		FAAFBFA82BEF57E100360CEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAAFBFAB2BEF57E100360CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAAFBFAD2BEF57E100360CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAFBFB32BEF5A9F00360CEA /* SecureEnclaveWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureEnclaveWrapper.swift; sourceTree = "<group>"; };
+		FAAFBFB52BEF5CC600360CEA /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		FAAFBFB92BEF6D2E00360CEA /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		FAAFBFBA2BEF6D2E00360CEA /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftKeychainWrapper.h; sourceTree = "<group>"; };
+		FAAFBFBB2BEF6D2E00360CEA /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		FAAFBFC52BEF86A200360CEA /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +70,34 @@
 				FAAFBF9F2BEF57DD00360CEA /* AppDelegate.swift */,
 				FAAFBFA12BEF57DD00360CEA /* SceneDelegate.swift */,
 				FAAFBFA32BEF57DD00360CEA /* ViewController.swift */,
+				FAAFBFB52BEF5CC600360CEA /* AlertManager.swift */,
 				FAAFBFA52BEF57DD00360CEA /* Main.storyboard */,
 				FAAFBFA82BEF57E100360CEA /* Assets.xcassets */,
 				FAAFBFAA2BEF57E100360CEA /* LaunchScreen.storyboard */,
 				FAAFBFAD2BEF57E100360CEA /* Info.plist */,
+				FAAFBFB32BEF5A9F00360CEA /* SecureEnclaveWrapper.swift */,
+				FAAFBFC52BEF86A200360CEA /* UserDefaults.swift */,
+				FAAFBFB72BEF6D2E00360CEA /* Vendors */,
 			);
 			path = SecureEnclaveDemo;
+			sourceTree = "<group>";
+		};
+		FAAFBFB72BEF6D2E00360CEA /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				FAAFBFB82BEF6D2E00360CEA /* SwiftKeychainWrapper */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		FAAFBFB82BEF6D2E00360CEA /* SwiftKeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				FAAFBFB92BEF6D2E00360CEA /* KeychainWrapper.swift */,
+				FAAFBFBA2BEF6D2E00360CEA /* SwiftKeychainWrapper.h */,
+				FAAFBFBB2BEF6D2E00360CEA /* KeychainItemAccessibility.swift */,
+			);
+			path = SwiftKeychainWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +173,12 @@
 			files = (
 				FAAFBFA42BEF57DD00360CEA /* ViewController.swift in Sources */,
 				FAAFBFA02BEF57DD00360CEA /* AppDelegate.swift in Sources */,
+				FAAFBFB62BEF5CC600360CEA /* AlertManager.swift in Sources */,
+				FAAFBFBC2BEF6D2E00360CEA /* KeychainWrapper.swift in Sources */,
+				FAAFBFC62BEF86A200360CEA /* UserDefaults.swift in Sources */,
 				FAAFBFA22BEF57DD00360CEA /* SceneDelegate.swift in Sources */,
+				FAAFBFBD2BEF6D2E00360CEA /* KeychainItemAccessibility.swift in Sources */,
+				FAAFBFB42BEF5A9F00360CEA /* SecureEnclaveWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +338,8 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +368,8 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
